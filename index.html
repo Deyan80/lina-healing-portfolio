@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Неделина Цанева — Lina · Healing Mentor · Yoga Teacher">
+<meta property="og:description" content="Healing Преподавател · First Lady Award 2026 · Корица на GLAMOUR · Mrs. Bulgaria International 2019">
+<meta property="og:image" content="photo1.jpg">
+<title>Неделина Цанева · Lina — Healing Mentor & Yoga Teacher</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,900;1,400;1,700&family=DM+Sans:wght@200;300;400;500&family=Italiana&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --sage:        #7a9e8a;
+  --sage-light:  #a8c4b0;
+  --sage-pale:   #d4e6da;
+  --sage-dark:   #4a6e5a;
+  --blush:       #c49a8a;
+  --blush-light: #e0bdb2;
+  --cream:       #f5ede0;
+  --gold:        #b8956a;
+  --gold-light:  #d4b48c;
+  --platinum:    #c8c4bc;
+
+  --bg:          #080a08;
+  --bg-2:        #0e110e;
+  --bg-3:        #131813;
+  --bg-card:     #0c0f0c;
+
+  --text:        #f0ece4;
+  --text-soft:   #d8d0c4;
+  --text-muted:  rgba(240,236,228,0.48);
+
+  --border:      rgba(122,158,138,0.22);
+  --border-soft: rgba(122,158,138,0.08);
+  --nav-bg:      rgba(8,10,8,0.94);
+  --shadow:      0 24px 80px rgba(0,0,0,0.8);
+}
+
+html.light {
+  --bg:          #f8f4ee;
+  --bg-2:        #eee8de;
+  --bg-3:        #e4dcd0;
+  --bg-card:     #fdfaf5;
+  --text:        #18160f;
+  --text-soft:   #36302a;
+  --text-muted:  rgba(24,22,15,0.5);
+  --border:      rgba(90,120,100,0.22);
+  --border-soft: rgba(90,120,100,0.1);
+  --nav-bg:      rgba(248,244,238,0.96);
+  --sage:        #4a7a60;
+  --sage-light:  #6a9a78;
+  --sage-dark:   #2a5040;
+  --blush:       #a07060;
+  --gold:        #8a6038;
+  --gold-light:  #a8803a;
+  --shadow:      0 24px 80px rgba(0,0,0,0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed; inset: 0; z-index: 9997;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+html.light body::before { opacity: 0.018; }
+
+/* ── CURSOR ── */
+@media (pointer: coarse) { .cur, .cur-ring { display: none; } }
+.cur {
+  position: fixed; width: 8px; height: 8px;
+  background: var(--sage); border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%,-50%);
+  transition: width .2s, height .2s, background .3s;
+  mix-blend-mode: exclusion;
+}
+.cur-ring {
+  position: fixed; width: 34px; height: 34px;
+  border: 1px solid rgba(122,158,138,0.6);
+  border-radius: 50%; pointer-events: none; z-index: 9998;
+  transform: translate(-50%,-50%); transition: all .12s ease;
+}
+
+/* ── CONTROLS ── */
+.controls {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  z-index: 200; display: flex; gap: 8px;
+}
+.ctrl-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px; letter-spacing: 3px; font-weight: 500;
+  color: var(--sage); background: var(--bg-2);
+  border: 1px solid var(--border);
+  padding: 9px 18px; cursor: pointer;
+  transition: all .3s; border-radius: 40px;
+  user-select: none;
+}
+.ctrl-btn:hover { background: var(--sage); color: var(--bg); }
+@media (pointer: fine) { .ctrl-btn { cursor: none; } }
+
+/* ── MUSIC BAR ── */
+.music-bar {
+  position: fixed; top: 80px; right: 24px; z-index: 150;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--bg-2); border: 1px solid var(--border);
+  padding: 10px 18px; border-radius: 40px;
+  transition: background .5s;
+}
+.music-btn {
+  background: none; border: none; color: var(--sage);
+  font-size: 16px; cursor: pointer; line-height: 1;
+  display: flex; align-items: center;
+}
+@media (pointer: fine) { .music-btn { cursor: none; } }
+.music-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 3px; color: var(--text-muted); font-weight: 500;
+}
+.music-waves { display: flex; gap: 3px; align-items: flex-end; height: 14px; }
+.music-waves span {
+  display: block; width: 2px;
+  background: var(--sage); border-radius: 2px;
+  animation: wave 1s ease-in-out infinite; opacity: 0;
+}
+.music-waves span:nth-child(1) { animation-delay:0s; height:5px; }
+.music-waves span:nth-child(2) { animation-delay:.15s; height:10px; }
+.music-waves span:nth-child(3) { animation-delay:.3s; height:14px; }
+.music-waves span:nth-child(4) { animation-delay:.15s; height:10px; }
+.music-waves.playing span { opacity: 1; }
+@keyframes wave { 0%,100%{transform:scaleY(.3)} 50%{transform:scaleY(1)} }
+@media (max-width: 700px) { .music-bar { top: auto; bottom: 80px; right: 16px; } }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 60px;
+  background: var(--nav-bg); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-soft);
+  transition: background .5s;
+}
+.nav-logo {
+  font-family: 'Italiana', serif;
+  font-size: 18px; letter-spacing: 4px;
+  color: var(--sage); text-decoration: none;
+}
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px; letter-spacing: 3px; font-weight: 500;
+  color: var(--text-muted); text-decoration: none;
+  transition: color .3s;
+}
+.nav-links a:hover { color: var(--sage); }
+@media (max-width: 700px) {
+  nav { padding: 14px 20px; flex-direction: column; gap: 10px; }
+  .nav-links { gap: 14px; flex-wrap: wrap; justify-content: center; }
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: flex-end; overflow: hidden;
+}
+.hero-photo {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center 10%; z-index: 0;
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(
+    110deg,
+    rgba(8,10,8,0.96) 0%,
+    rgba(8,10,8,0.65) 50%,
+    rgba(8,10,8,0.1) 100%
+  );
+  transition: background .5s;
+}
+html.light .hero-overlay {
+  background: linear-gradient(
+    110deg,
+    rgba(248,244,238,0.97) 0%,
+    rgba(248,244,238,0.72) 50%,
+    rgba(248,244,238,0.1) 100%
+  );
+}
+.hero-fade {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 280px; z-index: 2;
+  background: linear-gradient(0deg, var(--bg), transparent);
+  transition: background .5s;
+}
+.hero-content {
+  position: relative; z-index: 3;
+  padding: 160px 80px 130px;
+  max-width: 780px;
+}
+.hero-leaf { font-size: 28px; margin-bottom: 18px; animation: fadeUp 1s ease .1s both; }
+.hero-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px; letter-spacing: 7px; font-weight: 500;
+  color: var(--sage); margin-bottom: 20px;
+  animation: fadeUp 1s ease .25s both;
+}
+.hero-name {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(54px, 10vw, 136px);
+  font-weight: 900; line-height: .88;
+  color: var(--text); margin-bottom: 12px;
+  animation: fadeUp 1s ease .4s both;
+}
+.hero-name em { font-style: italic; color: var(--sage); }
+.hero-aka {
+  font-family: 'Italiana', serif;
+  font-size: clamp(20px, 3vw, 32px);
+  color: var(--gold-light); letter-spacing: 6px;
+  margin-bottom: 16px; animation: fadeUp 1s ease .52s both;
+}
+.hero-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px; letter-spacing: 4px; font-weight: 300;
+  color: var(--text-muted); margin-bottom: 40px;
+  animation: fadeUp 1s ease .65s both;
+}
+.hero-divider {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 30px; animation: fadeUp 1s ease .78s both;
+}
+.hero-divider::before, .hero-divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(90deg, var(--sage), transparent);
+}
+.hero-divider::after { background: linear-gradient(270deg, var(--sage), transparent); }
+.hero-gem { color: var(--sage); font-size: 8px; }
+.hero-badges {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  animation: fadeUp 1s ease .9s both;
+}
+.hero-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 2px; font-weight: 500;
+  border: 1px solid var(--sage);
+  color: var(--sage-light); padding: 7px 16px;
+  border-radius: 40px;
+}
+.scroll-arrow {
+  position: absolute; bottom: 36px; left: 50%;
+  transform: translateX(-50%); z-index: 5;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  animation: fadeUp 1s ease 1.5s both;
+}
+.scroll-arrow span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 4px; color: var(--sage); opacity: .4;
+}
+.arrow-line {
+  width: 1px; height: 48px;
+  background: linear-gradient(180deg, transparent, var(--sage));
+  animation: pulse-down 2s ease-in-out infinite;
+}
+@keyframes pulse-down { 0%,100%{opacity:0;transform:translateY(-8px)} 50%{opacity:1;transform:translateY(0)} }
+
+/* ── MOBILE HERO — текстът се спуска надолу, далеч от лицето ── */
+@media (max-width: 700px) {
+  .hero {
+    align-items: flex-end;
+  }
+  .hero-photo {
+    object-position: center 15%;
+  }
+  .hero-content {
+    padding: 0 24px 90px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(8,10,8,0.05) 0%,
+      rgba(8,10,8,0.2) 35%,
+      rgba(8,10,8,0.88) 58%,
+      rgba(8,10,8,0.98) 100%
+    ) !important;
+  }
+  html.light .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(248,244,238,0.05) 0%,
+      rgba(248,244,238,0.2) 35%,
+      rgba(248,244,238,0.88) 58%,
+      rgba(248,244,238,0.98) 100%
+    ) !important;
+  }
+  .hero-leaf { font-size: 22px; margin-bottom: 10px; }
+  .hero-name { margin-bottom: 8px; }
+  .hero-aka { margin-bottom: 10px; }
+  .hero-sub { margin-bottom: 24px; }
+  .hero-divider { margin-bottom: 18px; }
+}
+
+/* ── TICKER ── */
+.ticker-wrap {
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--sage-dark), var(--sage), var(--sage-dark));
+  padding: 12px 0;
+}
+.ticker { display: flex; width: max-content; animation: scroll 50s linear infinite; }
+.ticker span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px; letter-spacing: 5px; font-weight: 500;
+  color: rgba(255,255,255,0.9); padding: 0 30px;
+}
+.ticker .dot { color: rgba(255,255,255,0.4); padding: 0 4px; }
+@keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ── SECTION BASE ── */
+.section { position: relative; padding: 120px 80px; overflow: hidden; transition: background .5s; }
+.section-inner { max-width: 1300px; margin: 0 auto; position: relative; z-index: 1; }
+@media (max-width: 900px) { .section { padding: 80px 32px; } }
+@media (max-width: 600px) { .section { padding: 60px 20px; } }
+.eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 6px; font-weight: 500;
+  color: var(--sage); opacity: .7; display: block; margin-bottom: 16px;
+}
+.big-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(42px, 7vw, 88px);
+  line-height: .9; color: var(--text); margin-bottom: 50px;
+}
+.big-title em { color: var(--sage); font-style: italic; }
+.body-text { font-size: clamp(15px, 1.6vw, 18px); font-weight: 300; line-height: 1.9; color: var(--text-soft); opacity: .88; }
+.body-text p + p { margin-top: 20px; }
+
+/* ── ABOUT ── */
+.about-bg { background: var(--bg); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.9fr; gap: 80px; }
+@media (max-width: 800px) { .about-grid { grid-template-columns: 1fr; gap: 32px; } }
+.about-sticky { position: sticky; top: 100px; height: fit-content; }
+@media (max-width: 800px) { .about-sticky { position: static; } }
+.about-num {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 150px; line-height: 1;
+  color: var(--sage); opacity: .05; margin-bottom: -20px;
+}
+.pullquote {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(17px, 2vw, 24px); font-style: italic;
+  line-height: 1.65; color: var(--sage-light);
+  border-left: 2px solid var(--sage);
+  padding-left: 22px; margin: 32px 0;
+}
+.practice-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.practice-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px; letter-spacing: 2px; font-weight: 500;
+  background: rgba(122,158,138,0.1);
+  border: 1px solid var(--border);
+  color: var(--sage-light); padding: 7px 16px; border-radius: 40px;
+}
+.award-strip {
+  display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; align-items: center;
+}
+.award-item {
+  display: flex; flex-direction: column; align-items: flex-start;
+  border-left: 2px solid var(--gold); padding-left: 14px;
+}
+.award-item-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 13px; font-style: italic; color: var(--gold-light); line-height: 1.3;
+}
+.award-item-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 2px; color: var(--text-muted);
+}
+
+/* ── GALLERY ── */
+.gallery-bg { background: var(--bg-2); }
+
+/* Masonry-style mixed grid - FULL WIDTH */
+.gallery-masonry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 320px;
+  gap: 4px;
+  margin-top: 60px;
+  width: 100%;
+}
+@media (max-width: 1000px) { 
+  .gallery-masonry { 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-auto-rows: 280px;
+  } 
+}
+@media (max-width: 560px) { 
+  .gallery-masonry { 
+    grid-template-columns: 1fr; 
+    grid-auto-rows: 320px; 
+  } 
+}
+
+.g-item {
+  position: relative; overflow: hidden;
+  cursor: none;
+}
+@media (pointer: coarse) { .g-item { cursor: auto; } }
+.g-item.tall { grid-row: span 2; }
+.g-item.wide { grid-column: span 2; }
+.g-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  transition: transform .7s ease, filter .5s;
+  display: block;
+}
+.g-item.logo-item img { object-position: center center; object-fit: contain; background: var(--bg); }
+.g-item:hover img { transform: scale(1.07); filter: brightness(1.06) saturate(1.1); }
+.g-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(8,10,8,0.7) 0%, transparent 55%);
+  display: flex; align-items: flex-end; padding: 18px;
+  opacity: 0; transition: opacity .4s;
+}
+html.light .g-overlay { background: linear-gradient(0deg, rgba(248,244,238,0.75) 0%, transparent 55%); }
+.g-item:hover .g-overlay { opacity: 1; }
+.g-cap {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 3px; font-weight: 500;
+  color: var(--sage-light);
+}
+
+/* ── WIDE PHOTO STRIP ── */
+.strip-bg { background: var(--bg-2); }
+.wide-strip { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 3px; 
+  margin-top: 60px; 
+}
+@media (max-width: 700px) { 
+  .wide-strip { grid-template-columns: 1fr; } 
+}
+.wide-item { 
+  position: relative; overflow: hidden; 
+  aspect-ratio: 16/7; 
+}
+.wide-item.logo-wide { 
+  background: var(--bg-3); 
+  display: flex; align-items: center; justify-content: center; 
+}
+.wide-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  transition: transform .7s ease;
+}
+.wide-item.logo-wide img { object-fit: contain; padding: 30px; }
+.wide-item:hover img { transform: scale(1.04); }
+
+/* ── PRACTICES ── */
+.practices-bg { background: var(--bg-3); }
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px; margin-top: 60px;
+}
+@media (max-width: 900px) { .practices-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .practices-grid { grid-template-columns: 1fr; } }
+.practice-card {
+  background: var(--bg-card);
+  padding: 44px 34px; position: relative; overflow: hidden;
+  transition: background .4s;
+  border-bottom: 2px solid transparent;
+}
+.practice-card:hover { border-bottom-color: var(--sage); }
+.practice-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sage), transparent);
+  transform: scaleX(0); transform-origin: center;
+  transition: transform .5s;
+}
+.practice-card:hover::before { transform: scaleX(1); }
+.practice-icon { font-size: 26px; margin-bottom: 16px; display: block; }
+.practice-card-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 20px; color: var(--text); margin-bottom: 12px; line-height: 1.2;
+}
+.practice-card-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; line-height: 1.7; color: var(--text-muted); font-weight: 300;
+}
+.practice-card-loc {
+  margin-top: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px; letter-spacing: 2px; color: var(--sage); font-weight: 500;
+}
+@media (max-width: 560px) { .practice-card { padding: 30px 22px; } }
+
+/* ── ACHIEVEMENTS / TIMELINE ── */
+.ach-bg { background: var(--bg); }
+.ach-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 2px; margin-top: 60px;
+}
+@media (max-width: 700px) { .ach-grid { grid-template-columns: 1fr; } }
+.ach-card {
+  background: var(--bg-card);
+  padding: 38px 32px; border-left: 3px solid transparent;
+  transition: border-color .35s, background .35s;
+  position: relative;
+}
+.ach-card:hover { border-left-color: var(--sage); background: var(--bg-3); }
+.ach-year {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px; letter-spacing: 4px; font-weight: 500;
+  color: var(--sage); opacity: .6; display: block; margin-bottom: 12px;
+}
+.ach-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 22px; color: var(--text); margin-bottom: 10px; line-height: 1.2;
+}
+.ach-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; line-height: 1.7; color: var(--text-muted); font-weight: 300;
+}
+.ach-icon { font-size: 20px; margin-bottom: 14px; display: block; }
+
+/* ── PHILOSOPHY / CENTRAL QUOTE ── */
+.philosophy-bg {
+  background: var(--bg); text-align: center; padding: 160px 80px;
+  position: relative;
+}
+.philosophy-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 55% 55% at 50% 50%, rgba(122,158,138,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.mega-quote {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(20px, 3.2vw, 44px);
+  font-weight: 400; font-style: italic;
+  line-height: 1.5; color: var(--text); margin-bottom: 36px;
+  position: relative;
+}
+.mega-quote em { color: var(--sage); }
+.quote-sig {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 5px; font-weight: 500;
+  color: var(--sage); opacity: .5;
+}
+@media (max-width: 700px) { .philosophy-bg { padding: 80px 24px; } }
+
+/* ── SOCIAL ── */
+.social-bg { background: var(--bg-2); }
+.social-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; margin-top: 60px;
+}
+@media (max-width: 800px) { .social-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .social-grid { grid-template-columns: 1fr; } }
+.social-card {
+  background: var(--bg-card); border: 1px solid var(--border-soft);
+  padding: 38px 28px; text-align: center; text-decoration: none;
+  display: block; transition: border-color .35s, background .35s, transform .35s;
+}
+.social-card:hover { border-color: var(--sage); background: var(--bg-3); transform: translateY(-4px); }
+.social-icon { font-size: 26px; margin-bottom: 14px; display: block; }
+.social-platform {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px; letter-spacing: 3px; font-weight: 500;
+  color: var(--sage); display: block; margin-bottom: 8px;
+}
+.social-handle {
+  font-family: 'Italiana', serif;
+  font-size: 16px; color: var(--text-muted);
+}
+.social-note {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 2px; color: var(--text-muted);
+  margin-top: 10px; display: block;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--bg); padding: 70px 80px 80px;
+  border-top: 1px solid var(--border-soft); transition: background .5s;
+}
+.footer-inner {
+  max-width: 1300px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.8fr 1fr 1fr;
+  gap: 60px; margin-bottom: 50px;
+}
+@media (max-width: 900px) { footer { padding: 60px 32px 80px; } .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; } }
+@media (max-width: 560px) { footer { padding: 48px 20px 80px; } .footer-inner { grid-template-columns: 1fr; } }
+.footer-logo {
+  font-family: 'Italiana', serif;
+  font-size: 22px; letter-spacing: 4px; color: var(--sage);
+  display: block; margin-bottom: 16px;
+}
+.footer-tagline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; line-height: 1.7; color: var(--text-muted); font-weight: 300;
+}
+.footer-col-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 4px; font-weight: 500;
+  color: var(--sage); opacity: .6; display: block; margin-bottom: 20px;
+}
+.footer-list { list-style: none; }
+.footer-list li, .footer-list a {
+  font-family: 'DM Sans', sans-serif; font-size: 13px;
+  color: var(--text-muted); text-decoration: none;
+  display: block; padding: 6px 0;
+  border-bottom: 1px solid var(--border-soft); transition: color .3s; font-weight: 300;
+}
+.footer-list a:hover { color: var(--sage); }
+.footer-bottom {
+  max-width: 1300px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid var(--border-soft); padding-top: 24px;
+}
+.footer-copy {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7px; letter-spacing: 3px; color: var(--text-muted); opacity: .5;
+}
+@media (max-width: 560px) { .footer-bottom { flex-direction: column; gap: 12px; text-align: center; } }
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="ring"></div>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC BAR -->
+<div class="music-bar" id="musicBar">
+  <button class="music-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Пусни музика">▶</button>
+  <span class="music-label" id="musicLabel" data-bg="МУЗИКА" data-en="MUSIC">МУЗИКА</span>
+  <div class="music-waves" id="musicWaves">
+    <span></span><span></span><span></span><span></span>
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <button class="ctrl-btn" id="themeBtn" onclick="toggleTheme()">☀ <span data-bg="СВЕТЛА" data-en="LIGHT">СВЕТЛА</span></button>
+  <button class="ctrl-btn" id="langBtn" onclick="toggleLang()">EN</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Неделина · Lina</a>
+  <ul class="nav-links">
+    <li><a href="#about" data-bg="ЗА МЕН" data-en="ABOUT">ЗА МЕН</a></li>
+    <li><a href="#gallery" data-bg="ГАЛЕРИЯ" data-en="GALLERY">ГАЛЕРИЯ</a></li>
+    <li><a href="#practices" data-bg="ПРАКТИКИ" data-en="PRACTICES">ПРАКТИКИ</a></li>
+    <li><a href="#achievements" data-bg="ПОСТИЖЕНИЯ" data-en="ACHIEVEMENTS">ПОСТИЖЕНИЯ</a></li>
+    <li><a href="#social" data-bg="СОЦИАЛНИ" data-en="SOCIAL">СОЦИАЛНИ</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-photo" src="photo1.jpg" alt="Неделина Цанева — Lina">
+  <div class="hero-overlay"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-content">
+    <div class="hero-leaf">🌿</div>
+    <div class="hero-eyebrow" data-bg="HEALING MENTOR · YOGA TEACHER · БЪЛГАРИЯ" data-en="HEALING MENTOR · YOGA TEACHER · BULGARIA">HEALING MENTOR · YOGA TEACHER · БЪЛГАРИЯ</div>
+    <div class="hero-name">
+      <em data-bg="Неделина" data-en="Nedelina">Неделина</em><br>
+      <span data-bg="Цанева" data-en="Tsaneva">Цанева</span>
+    </div>
+    <div class="hero-aka" data-bg="Lina" data-en="Lina">Lina</div>
+    <div class="hero-sub" data-bg="КРАСОТА · HEALING · ТРАНСФОРМАЦИЯ · ЖЕНСКА СИЛА" data-en="BEAUTY · HEALING · TRANSFORMATION · FEMININE POWER">КРАСОТА · HEALING · ТРАНСФОРМАЦИЯ · ЖЕНСКА СИЛА</div>
+    <div class="hero-divider"><span class="hero-gem">✦</span></div>
+    <div class="hero-badges">
+      <span class="hero-badge" data-bg="🏆 FIRST LADY AWARD 2026" data-en="🏆 FIRST LADY AWARD 2026">🏆 FIRST LADY AWARD 2026</span>
+      <span class="hero-badge" data-bg="🌿 CERTIFIED HEALING MENTOR" data-en="🌿 CERTIFIED HEALING MENTOR">🌿 CERTIFIED HEALING MENTOR</span>
+      <span class="hero-badge" data-bg="📖 КОРИЦА GLAMOUR 02.2026" data-en="📖 GLAMOUR COVER 02.2026">📖 КОРИЦА GLAMOUR 02.2026</span>
+      <span class="hero-badge" data-bg="✨ КОРИЦА MODE SPAIN 04.2026" data-en="✨ MODE SPAIN COVER 04.2026">✨ КОРИЦА MODE SPAIN 04.2026</span>
+      <span class="hero-badge" data-bg="👑 MRS. BULGARIA INTERNATIONAL 2019" data-en="👑 MRS. BULGARIA INTERNATIONAL 2019">👑 MRS. BULGARIA INTERNATIONAL 2019</span>
+    </div>
+  </div>
+  <div class="scroll-arrow">
+    <span data-bg="ОТКРИЙ ПОВЕЧЕ" data-en="DISCOVER MORE">ОТКРИЙ ПОВЕЧЕ</span>
+    <div class="arrow-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span data-bg="НЕДЕЛИНА ЦАНЕВА" data-en="NEDELINA TSANEVA">НЕДЕЛИНА ЦАНЕВА</span><span class="dot">✦</span>
+    <span data-bg="HEALING MENTOR" data-en="HEALING MENTOR">HEALING MENTOR</span><span class="dot">✦</span>
+    <span data-bg="FIRST LADY AWARD 2026" data-en="FIRST LADY AWARD 2026">FIRST LADY AWARD 2026</span><span class="dot">✦</span>
+    <span data-bg="GLAMOUR MAGAZINE" data-en="GLAMOUR MAGAZINE">GLAMOUR MAGAZINE</span><span class="dot">✦</span>
+    <span data-bg="VAYANA YOGA CLUB" data-en="VAYANA YOGA CLUB">VAYANA YOGA CLUB</span><span class="dot">✦</span>
+    <span data-bg="MRS. BULGARIA INTERNATIONAL 2019" data-en="MRS. BULGARIA INTERNATIONAL 2019">MRS. BULGARIA INTERNATIONAL 2019</span><span class="dot">✦</span>
+    <span data-bg="ЖЕНСКИ КРЪГОВЕ" data-en="WOMEN'S CIRCLES">ЖЕНСКИ КРЪГОВЕ</span><span class="dot">✦</span>
+    <span data-bg="MODE SPAIN COVER" data-en="MODE SPAIN COVER">MODE SPAIN COVER</span><span class="dot">✦</span>
+    <!-- duplicate -->
+    <span data-bg="НЕДЕЛИНА ЦАНЕВА" data-en="NEDELINA TSANEVA">НЕДЕЛИНА ЦАНЕВА</span><span class="dot">✦</span>
+    <span data-bg="HEALING MENTOR" data-en="HEALING MENTOR">HEALING MENTOR</span><span class="dot">✦</span>
+    <span data-bg="FIRST LADY AWARD 2026" data-en="FIRST LADY AWARD 2026">FIRST LADY AWARD 2026</span><span class="dot">✦</span>
+    <span data-bg="GLAMOUR MAGAZINE" data-en="GLAMOUR MAGAZINE">GLAMOUR MAGAZINE</span><span class="dot">✦</span>
+    <span data-bg="VAYANA YOGA CLUB" data-en="VAYANA YOGA CLUB">VAYANA YOGA CLUB</span><span class="dot">✦</span>
+    <span data-bg="MRS. BULGARIA INTERNATIONAL 2019" data-en="MRS. BULGARIA INTERNATIONAL 2019">MRS. BULGARIA INTERNATIONAL 2019</span><span class="dot">✦</span>
+    <span data-bg="ЖЕНСКИ КРЪГОВЕ" data-en="WOMEN'S CIRCLES">ЖЕНСКИ КРЪГОВЕ</span><span class="dot">✦</span>
+    <span data-bg="MODE SPAIN COVER" data-en="MODE SPAIN COVER">MODE SPAIN COVER</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about-bg" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-sticky reveal">
+        <div class="about-num">01</div>
+        <span class="eyebrow" data-bg="— ПОРТРЕТ" data-en="— PORTRAIT">— ПОРТРЕТ</span>
+      </div>
+      <div>
+        <h2 class="big-title reveal" data-bg-html="ПРОСТРАНСТВО<br>ЗА <em>ТРАНСФОРМАЦИЯ</em>" data-en-html="SPACE<br>FOR <em>TRANSFORMATION</em>">ПРОСТРАНСТВО<br>ЗА <em>ТРАНСФОРМАЦИЯ</em></h2>
+        <div class="body-text">
+          <p class="reveal d1" data-bg="Неделина Цанева — Lina е жена, която е преминала през мода, музика, красота и телевизия, за да стигне до своята истинска мисия: да създава пространство за жени, които усещат нуждата да намерят себе си и да преоткрият най-добрата своя версия." data-en="Nedelina Tsaneva — Lina is a woman who has journeyed through fashion, music, beauty and television, only to arrive at her true calling: creating space for women who feel the need to find themselves and rediscover their best selves.">Неделина Цанева — Lina е жена, която е преминала през мода, музика, красота и телевизия, за да стигне до своята истинска мисия: да създава пространство за жени, които усещат нуждата да намерят себе си и да преоткрият най-добрата своя версия.</p>
+          <p class="pullquote reveal d2" data-bg="„Красотата е само началото. Истинската трансформация започва отвътре."" data-en="«Beauty is only the beginning. Real transformation starts from within.»">„Красотата е само началото. Истинската трансформация започва отвътре."</p>
+          <p class="reveal d2" data-bg="Сертифицирана Healing преподавател на световно ниво, ментор на жени и водещ на женски кръгове в Yoga &amp; Recharge Center Vayana. В практиките си съчетава йога асани, пранаяма дишане, медитация, афирмации, карти с утвърждения и таро карти — в едно цялостно преживяване, което трансформира." data-en="A certified Healing teacher at world level, women's mentor and women's circle facilitator at Yoga &amp; Recharge Center Vayana. Her practice weaves together yoga asanas, pranayama breathing, meditation, affirmations, oracle cards and tarot — into one holistic transformative experience.">Сертифицирана Healing преподавател на svetovно ниво, ментор на жени и водещ на женски кръгове в Yoga &amp; Recharge Center Vayana. В практиките си съчетава йога асани, пранаяма дишане, медитация, афирмации, карти с утвърждения и таро карти — в едно цялостно преживяване, което трансформира.</p>
+          <p class="reveal d3" data-bg="С близо 15 години в модния бранш, корици на GLAMOUR и MODE Spain, участие в реалити формата Фермата 9, музикална кариера като изпълнител и продуцент, и множество титли за красота, кулминирали с Mrs. Bulgaria International 2019 — Lina е жива легенда за себе-откриване." data-en="With nearly 15 years in fashion, covers of GLAMOUR and MODE Spain, a starring role in the reality show Fermata 9, a music career as performer and producer, and multiple beauty titles culminating in Mrs. Bulgaria International 2019 — Lina is a living legend of self-discovery.">С близо 15 години в модния бранш, корици на GLAMOUR и MODE Spain, участие в реалити формата Фермата 9, музикална кариера като изпълнител и продуцент, и множество титли за красота, кулминирали с Mrs. Bulgaria International 2019 — Lina е жива легенда за себе-откриване.</p>
+        </div>
+        <div class="practice-tags reveal d3">
+          <span class="practice-tag" data-bg="🧘 ЙОГА АСАНИ" data-en="🧘 YOGA ASANAS">🧘 ЙОГА АСАНИ</span>
+          <span class="practice-tag" data-bg="🌬️ ПРАНАЯМА" data-en="🌬️ PRANAYAMA">🌬️ ПРАНАЯМА</span>
+          <span class="practice-tag" data-bg="🔮 МЕДИТАЦИЯ" data-en="🔮 MEDITATION">🔮 МЕДИТАЦИЯ</span>
+          <span class="practice-tag" data-bg="🌸 ЖЕНСКИ КРЪГОВЕ" data-en="🌸 WOMEN'S CIRCLES">🌸 ЖЕНСКИ КРЪГОВЕ</span>
+          <span class="practice-tag" data-bg="✨ АФИРМАЦИИ" data-en="✨ AFFIRMATIONS">✨ АФИРМАЦИИ</span>
+          <span class="practice-tag" data-bg="🃏 ТАРО КАРТИ" data-en="🃏 TAROT CARDS">🃏 ТАРО КАРТИ</span>
+          <span class="practice-tag" data-bg="🌿 HEALING" data-en="🌿 HEALING">🌿 HEALING</span>
+        </div>
+        <div class="award-strip reveal d3">
+          <div class="award-item">
+            <span class="award-item-title" data-bg="First Lady Award 2026" data-en="First Lady Award 2026">First Lady Award 2026</span>
+            <span class="award-item-sub" data-bg="КАТЕГОРИЯ: МЕНТОР" data-en="CATEGORY: MENTOR">КАТЕГОРИЯ: МЕНТОР</span>
+          </div>
+          <div class="award-item">
+            <span class="award-item-title" data-bg="Корица GLAMOUR" data-en="GLAMOUR Cover">Корица GLAMOUR</span>
+            <span class="award-item-sub" data-bg="ФЕВРУАРИ 2026" data-en="FEBRUARY 2026">ФЕВРУАРИ 2026</span>
+          </div>
+          <div class="award-item">
+            <span class="award-item-title" data-bg="Корица MODE SPAIN" data-en="MODE SPAIN Cover">Корица MODE SPAIN</span>
+            <span class="award-item-sub" data-bg="АПРИЛ 2026" data-en="APRIL 2026">АПРИЛ 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (пълен размер) -->
+<section class="section gallery-bg" id="gallery">
+  <div class="section-inner">
+    <span class="eyebrow reveal" data-bg="— ГАЛЕРИЯ" data-en="— GALLERY">— ГАЛЕРИЯ</span>
+    <h2 class="big-title reveal d1" data-bg-html="МОМЕНТИ<br>НА <em>СИЛА</em>" data-en-html="MOMENTS<br>OF <em>POWER</em>">МОМЕНТИ<br>НА <em>СИЛА</em></h2>
+
+    <div class="gallery-masonry">
+      <div class="g-item tall reveal"><img src="photo2.jpg" alt="Неделина Цанева"><div class="g-overlay"><span class="g-cap" data-bg="ГРАЦИЯТА Е ВРОДЕНА" data-en="GRACE IS INNATE">ГРАЦИЯТА Е ВРОДЕНА</span></div></div>
+      <div class="g-item reveal d1"><img src="photo3.jpg" alt="Lina"><div class="g-overlay"><span class="g-cap" data-bg="СВЕТЛИНА ОТВЪТРЕ" data-en="LIGHT FROM WITHIN">СВЕТЛИНА ОТВЪТРЕ</span></div></div>
+      <div class="g-item reveal d2"><img src="photo4.jpg" alt="Lina стил"><div class="g-overlay"><span class="g-cap" data-bg="СТИЛЪТ Е НАЧИН НА МИСЛЕНЕ" data-en="STYLE IS A WAY OF THINKING">СТИЛЪТ Е НАЧИН НА МИСЛЕНЕ</span></div></div>
+      <div class="g-item tall reveal d3"><img src="photo5.jpg" alt="Неделина"><div class="g-overlay"><span class="g-cap" data-bg="СИЛАТА Е В ПРИСЪСТВИЕТО" data-en="STRENGTH IS IN PRESENCE">СИЛАТА Е В ПРИСЪСТВИЕТО</span></div></div>
+      <div class="g-item reveal d1"><img src="photo6.jpg" alt="Lina визия"><div class="g-overlay"><span class="g-cap" data-bg="ВИЗИЯ, КОЯТО ВДЪХНОВЯВА" data-en="A VISION THAT INSPIRES">ВИЗИЯ, КОЯТО ВДЪХНОВЯВА</span></div></div>
+      <div class="g-item reveal d2"><img src="photo7.jpg" alt="Lina здраве"><div class="g-overlay"><span class="g-cap" data-bg="ЗДРАВЕТО Е КРАСОТА" data-en="HEALTH IS BEAUTY">ЗДРАВЕТО Е КРАСОТА</span></div></div>
+      <div class="g-item tall reveal"><img src="photo8.jpg" alt="Lina преподаване"><div class="g-overlay"><span class="g-cap" data-bg="ПРЕПОДАВАНЕТО Е ДАРБА" data-en="TEACHING IS A GIFT">ПРЕПОДАВАНЕТО Е ДАРБА</span></div></div>
+      <div class="g-item reveal d1"><img src="photo9.jpg" alt="Lina елегантност"><div class="g-overlay"><span class="g-cap" data-bg="ЕЛЕГАНТНОСТТА НЕ Е СЛУЧАЙНА" data-en="ELEGANCE IS NEVER ACCIDENTAL">ЕЛЕГАНТНОСТТА НЕ Е СЛУЧАЙНА</span></div></div>
+      <div class="g-item reveal d2"><img src="photo10.jpg" alt="Lina трансформация"><div class="g-overlay"><span class="g-cap" data-bg="ТРАНСФОРМАЦИЯТА Е ИЗБОР" data-en="TRANSFORMATION IS A CHOICE">ТРАНСФОРМАЦИЯТА Е ИЗБОР</span></div></div>
+      <div class="g-item reveal d3"><img src="photo2.jpg" alt="Lina красота" style="object-position: center 30%;"><div class="g-overlay"><span class="g-cap" data-bg="КРАСОТАТА Е НАЧИН НА ЖИВОТ" data-en="BEAUTY IS A WAY OF LIFE">КРАСОТАТА Е НАЧИН НА ЖИВОТ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WIDE STRIP (без Vayana заглавие) -->
+<section class="section strip-bg">
+  <div class="section-inner">
+    <div class="wide-strip">
+      <div class="wide-item reveal"><img src="wide1.jpg" alt="Vayana Yoga практика"></div>
+      <div class="wide-item reveal d1"><img src="wide2.jpg" alt="Женски кръг"></div>
+      <div class="wide-item logo-wide reveal d2"><img src="wide3.jpg" alt="Vayana Yoga Club лого"></div>
+      <div class="wide-item reveal d3"><img src="wide4.jpg" alt="Healing практика"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICES -->
+<section class="section practices-bg" id="practices">
+  <div class="section-inner">
+    <span class="eyebrow reveal" data-bg="— МОИТЕ УСЛУГИ" data-en="— MY SERVICES">— МОИТЕ УСЛУГИ</span>
+    <h2 class="big-title reveal d1" data-bg-html="ПЪТЯТ<br>КЪМ <em>СЕБЕ СИ</em>" data-en-html="THE PATH<br>TO <em>YOURSELF</em>">ПЪТЯТ<br>КЪМ <em>СЕБЕ СИ</em></h2>
+    <div class="practices-grid">
+      <div class="practice-card reveal">
+        <span class="practice-icon">🧘</span>
+        <div class="practice-card-title" data-bg="Групови занимания" data-en="Group Sessions">Групови занимания</div>
+        <div class="practice-card-desc" data-bg="Ежеседмични групови практики, съчетаващи йога асани, медитация и дишане. Пространство за споделяне, изцеление и женска сила." data-en="Weekly group practices combining yoga asanas, meditation and breathwork. A space for sharing, healing and feminine strength.">Ежеседмични групови практики, съчетаващи йога асани, медитация и дишане. Пространство за споделяне, изцеление и женска сила.</div>
+        <div class="practice-card-loc" data-bg="📍 VAYANA · СИМЕОНОВСКО ШОСЕ 77" data-en="📍 VAYANA · SIMEONOVO SHOSSE 77">📍 VAYANA · СИМЕОНОВСКО ШОСЕ 77</div>
+      </div>
+      <div class="practice-card reveal d1">
+        <span class="practice-icon">🌸</span>
+        <div class="practice-card-title" data-bg="Лични практики" data-en="Private Sessions">Лични практики</div>
+        <div class="practice-card-desc" data-bg="Индивидуални сесии с предварително уговорен час — персонализирано пътуване навътре, съобразено с твоите нужди и ритъм." data-en="Individual sessions by appointment — a personalised inward journey tailored to your needs and rhythm.">Индивидуални сесии с предварително уговорен час — персонализирано пътуване навътре, съобразено с твоите нужди и ритъм.</div>
+        <div class="practice-card-loc" data-bg="📩 ПО ПРЕДВАРИТЕЛНА УГОВОРКА" data-en="📩 BY APPOINTMENT">📩 ПО ПРЕДВАРИТЕЛНА УГОВОРКА</div>
+      </div>
+      <div class="practice-card reveal d2">
+        <span class="practice-icon">📚</span>
+        <div class="practice-card-title" data-bg="Сертифициран курс" data-en="Certified Course">Сертифициран курс</div>
+        <div class="practice-card-desc" data-bg="Обучение за Healing преподавател — сертифициран курс, с който и ти можеш да станеш ментор на жени и да вдъхновяваш. Световно признание." data-en="Healing teacher training — a certified course through which you too can become a women's mentor and inspire others. World-recognised.">Обучение за Healing преподавател — сертифициран курс, с който и ти можеш да станеш ментор на жени и да вдъхновяваш. Световно признание.</div>
+        <div class="practice-card-loc" data-bg="🌍 СВЕТОВНО СЕРТИФИЦИРАНЕ" data-en="🌍 WORLD CERTIFICATION">🌍 СВЕТОВНО СЕРТИФИЦИРАНЕ</div>
+      </div>
+      <div class="practice-card reveal">
+        <span class="practice-icon">🔮</span>
+        <div class="practice-card-title" data-bg="Женски кръгове" data-en="Women's Circles">Женски кръгове</div>
+        <div class="practice-card-desc" data-bg="Специални събирания на жени в кръг — ритуал на споделяне, лечение и свързване с женствеността. Дълбока трансформация в безопасно пространство." data-en="Special women's gatherings in circle — a ritual of sharing, healing and connecting with femininity. Deep transformation in a safe space.">Специални събирания на жени в кръг — ритуал на споделяне, лечение и свързване с женствеността. Дълбока трансформация в безопасно пространство.</div>
+        <div class="practice-card-loc" data-bg="✨ ТРАНСФОРМАЦИОННО ИЗЖИВЯВАНЕ" data-en="✨ TRANSFORMATIONAL EXPERIENCE">✨ ТРАНСФОРМАЦИОННО ИЗЖИВЯВАНЕ</div>
+      </div>
+      <div class="practice-card reveal d1">
+        <span class="practice-icon">🌬️</span>
+        <div class="practice-card-title" data-bg="Пранаяма дишане" data-en="Pranayama Breathing">Пранаяма дишане</div>
+        <div class="practice-card-desc" data-bg="Дишането е портал към вътрешния мир. Чрез пранаяма и свещени техники, тялото и умът намират своя баланс и спокойствие." data-en="Breath is the portal to inner peace. Through pranayama and sacred techniques, body and mind find their balance and stillness.">Дишането е портал към вътрешния мир. Чрез пранаяма и свещени техники, тялото и умът намират своя баланс и спокойствие.</div>
+        <div class="practice-card-loc" data-bg="🌿 DIVINE ENERGY PRACTICES" data-en="🌿 DIVINE ENERGY PRACTICES">🌿 DIVINE ENERGY PRACTICES</div>
+      </div>
+      <div class="practice-card reveal d2" style="background:linear-gradient(135deg, rgba(122,158,138,0.07) 0%, var(--bg-card) 100%);">
+        <span class="practice-icon">💫</span>
+        <div class="practice-card-title" data-bg="Запиши се сега" data-en="Book Now">Запиши се сега</div>
+        <div class="practice-card-desc" data-bg="Твоята трансформация те чака. Свържи се с Lina чрез социалните мрежи или посети Vayana Yoga &amp; Recharge Center и направи първата крачка." data-en="Your transformation awaits. Connect with Lina through social media or visit Vayana Yoga &amp; Recharge Center and take the first step.">Твоята трансформация те чака. Свържи се с Lina чрез социалните мрежи или посети Vayana Yoga &amp; Recharge Center и направи първата крачка.</div>
+        <div class="practice-card-loc" data-bg="→ СВЪРЖИ СЕ С MЕН" data-en="→ GET IN TOUCH">→ СВЪРЖИ СЕ С MЕН</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section philosophy-bg">
+  <div class="section-inner" style="max-width:880px;text-align:center;">
+    <div class="mega-quote reveal" data-bg-html="„Създавам пространство за жени, които усещат нуждата да намерят себе си и да преоткрият <em>най-добрата своя версия.</em>"" data-en-html="«I create space for women who feel the need to find themselves and to rediscover <em>their best selves.</em>»">„Създавам пространство за жени, които усещат нуждата да намерят себе си и да преоткрият <em>най-добрата своя версия.</em>"</div>
+    <div class="quote-sig reveal d2" data-bg="— НЕДЕЛИНА ЦАНЕВА · LINA · HEALING MENTOR" data-en="— NEDELINA TSANEVA · LINA · HEALING MENTOR">— НЕДЕЛИНА ЦАНЕВА · LINA · HEALING MENTOR</div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section ach-bg" id="achievements">
+  <div class="section-inner">
+    <span class="eyebrow reveal" data-bg="— ПОСТИЖЕНИЯ" data-en="— ACHIEVEMENTS">— ПОСТИЖЕНИЯ</span>
+    <h2 class="big-title reveal d1" data-bg-html="ИСТОРИЯ<br>НА <em>УСПЕХА</em>" data-en-html="A STORY<br>OF <em>SUCCESS</em>">ИСТОРИЯ<br>НА <em>УСПЕХА</em></h2>
+    <div class="ach-grid">
+      <div class="ach-card reveal"><span class="ach-icon">🏆</span><span class="ach-year" data-bg="2026" data-en="2026">2026</span><div class="ach-title" data-bg="First Lady Award — Категория Ментор" data-en="First Lady Award — Mentor Category">First Lady Award — Категория Ментор</div><div class="ach-desc" data-bg="Награда за изключителен принос като ментор на жени — признание за вдъхновяващата работа на Lina в световен мащаб." data-en="Award for exceptional contribution as a women's mentor — recognition of Lina's inspiring work on a world scale.">Награда за изключителен принос като ментор на жени — признание за вдъхновяващата работа на Lina в световен мащаб.</div></div>
+      <div class="ach-card reveal d1"><span class="ach-icon">📖</span><span class="ach-year" data-bg="2026" data-en="2026">2026</span><div class="ach-title" data-bg="Корица GLAMOUR Февруари 2026" data-en="GLAMOUR Cover February 2026">Корица GLAMOUR Февруари 2026</div><div class="ach-desc" data-bg="Lina открива 2026 г. с корицата на едно от най-влиятелните модни издания — знак за непоколебимото й присъствие в стила и красотата." data-en="Lina opens 2026 with the cover of one of fashion's most influential publications — a sign of her unshakeable presence in style and beauty.">Lina открива 2026 г. с корицата на едно от най-влиятелните модни издания — знак за непоколебимото й присъствие в стила и красотата.</div></div>
+      <div class="ach-card reveal d2"><span class="ach-icon">✨</span><span class="ach-year" data-bg="2026" data-en="2026">2026</span><div class="ach-title" data-bg="Корица MODE SPAIN Април 2026" data-en="MODE SPAIN Cover April 2026">Корица MODE SPAIN Април 2026</div><div class="ach-desc" data-bg="Международно признание от испанския моден свят — Lina завладява европейския стил с присъствие, харизма и неповторима визия." data-en="International recognition from the Spanish fashion world — Lina captivates European style with presence, charisma and an unmistakeable vision.">Международно признание от испанския моден свят — Lina завладява европейския стил с присъствие, харизма и неповторима визия.</div></div>
+      <div class="ach-card reveal d3"><span class="ach-icon">🌍</span><span class="ach-year" data-bg="ONGOING" data-en="ONGOING">ONGOING</span><div class="ach-title" data-bg="Сертифициран Healing Преподавател" data-en="Certified Healing Teacher">Сертифициран Healing Преподавател</div><div class="ach-desc" data-bg="Световна сертификация за Healing преподавател — Lina е ментор от световна класа, обучаваща следващото поколение водещи на жени." data-en="World certification as a Healing teacher — Lina is a world-class mentor, training the next generation of women's guides.">Световна сертификация за Healing преподавател — Lina е ментор от световна класа, обучаваща следващото поколение водещи на жени.</div></div>
+      <div class="ach-card reveal"><span class="ach-icon">👑</span><span class="ach-year" data-bg="2019" data-en="2019">2019</span><div class="ach-title" data-bg="Mrs. Bulgaria International 2019" data-en="Mrs. Bulgaria International 2019">Mrs. Bulgaria International 2019</div><div class="ach-desc" data-bg="Връх в конкурсната кариера на Lina — международна титла, спечелена с красота, интелигентност и неподправена харизма." data-en="The peak of Lina's pageant career — an international title won with beauty, intelligence and genuine charisma.">Връх в конкурсната кариера на Lina — международна титла, спечелена с красота, интелигентност и неподправена харизма.</div></div>
+      <div class="ach-card reveal d1"><span class="ach-icon">🎬</span><span class="ach-year" data-bg="TV / MUSIC / FASHION" data-en="TV / MUSIC / FASHION">TV / MUSIC / FASHION</span><div class="ach-title" data-bg="Фермата 9 · Музика · 15 год. в Модата" data-en="Fermata 9 · Music · 15 Years in Fashion">Фермата 9 · Музика · 15 год. в Модата</div><div class="ach-desc" data-bg="Реалити формат Фермата 9, три години на музикалната сцена като изпълнител и продуцент, и близо 15 години в модния бранш — Lina е многостранна артистична личност." data-en="Reality show Fermata 9, three years on the music scene as performer and producer, and nearly 15 years in fashion — Lina is a multi-faceted artistic personality.">Реалити формат Фермата 9, три години на музикалната сцена като изпълнител и продуцент, и близо 15 години в модния бранш — Lina е многостранна артистична личност.</div></div>
+      <div class="ach-card reveal d2"><span class="ach-icon">📰</span><span class="ach-year" data-bg="2018 · 2019" data-en="2018 · 2019">2018 · 2019</span><div class="ach-title" data-bg="Корица NUDE 2018 · Корица Playboy 2019" data-en="NUDE Cover 2018 · Playboy Cover 2019">Корица NUDE 2018 · Корица Playboy 2019</div><div class="ach-desc" data-bg="Единствената корица на Playboy без nude кадри (2019) — смел избор, утвърждаващ, че истинската сексапилност е в интелигентността и характера." data-en="The only Playboy cover without nude images (2019) — a bold choice affirming that true allure lies in intelligence and character.">Единствената корица на Playboy без nude кадри (2019) — смел избор, утвърждаващ, че истинската сексапилност е в интелигентността и характера.</div></div>
+      <div class="ach-card reveal d3" style="background:linear-gradient(135deg, rgba(122,158,138,0.07) 0%, var(--bg-card) 100%);"><span class="ach-icon">🌿</span><span class="ach-year" data-bg="2026+" data-en="2026+">2026+</span><div class="ach-title" data-bg="Историята продължава..." data-en="The Story Continues...">Историята продължава...</div><div class="ach-desc" data-bg="Нови корици, нови кръгове, нови жени трансформирани. Lina не спира — тя само започва следващата глава от своята история." data-en="New covers, new circles, new women transformed. Lina doesn't stop — she is only beginning the next chapter of her story.">Нови корици, нови кръгове, нови жени трансформирани. Lina не спира — тя само започва следващата глава от своята история.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL (с добавен Vayana Instagram) -->
+<section class="section social-bg" id="social">
+  <div class="section-inner">
+    <span class="eyebrow reveal" data-bg="— ПОСЛЕДВАЙ МЕ" data-en="— FOLLOW ME">— ПОСЛЕДВАЙ МЕ</span>
+    <h2 class="big-title reveal d1" data-bg-html="НАМЕРИ МЕ<br><em>ОНЛАЙН</em>" data-en-html="FIND ME<br><em>ONLINE</em>">НАМЕРИ МЕ<br><em>ОНЛАЙН</em></h2>
+    <div class="social-grid">
+      <a class="social-card reveal" href="https://www.facebook.com/nelsun.tsaneva" target="_blank" rel="noopener">
+        <span class="social-icon">📘</span>
+        <span class="social-platform">FACEBOOK</span>
+        <span class="social-handle">nelsun.tsaneva</span>
+        <span class="social-note" data-bg="ЛИЧЕН ПРОФИЛ" data-en="PERSONAL PROFILE">ЛИЧЕН ПРОФИЛ</span>
+      </a>
+      <a class="social-card reveal d1" href="https://www.instagram.com/lina_official_999/" target="_blank" rel="noopener">
+        <span class="social-icon">📸</span>
+        <span class="social-platform">INSTAGRAM</span>
+        <span class="social-handle">lina_official_999</span>
+        <span class="social-note" data-bg="ОФИЦИАЛЕН ПРОФИЛ" data-en="OFFICIAL PROFILE">ОФИЦИАЛЕН ПРОФИЛ</span>
+      </a>
+      <a class="social-card reveal d2" href="https://www.facebook.com/linatsanevaofficial" target="_blank" rel="noopener">
+        <span class="social-icon">📘</span>
+        <span class="social-platform">FACEBOOK</span>
+        <span class="social-handle">linatsanevaofficial</span>
+        <span class="social-note" data-bg="ОФИЦИАЛНА СТРАНИЦА" data-en="OFFICIAL PAGE">ОФИЦИАЛНА СТРАНИЦА</span>
+      </a>
+      <a class="social-card reveal d3" href="https://www.instagram.com/vayana_yogaclub" target="_blank" rel="noopener">
+        <span class="social-icon">📸</span>
+        <span class="social-platform">INSTAGRAM</span>
+        <span class="social-handle">vayana_yogaclub</span>
+        <span class="social-note" data-bg="VAYANA YOGA CLUB" data-en="VAYANA YOGA CLUB">VAYANA YOGA CLUB</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-logo">Неделина · Lina</span>
+      <p class="footer-tagline" data-bg="Healing Mentor · First Lady Award 2026 · Корица GLAMOUR & MODE Spain · Mrs. Bulgaria International 2019 · Vayana Yoga Club" data-en="Healing Mentor · First Lady Award 2026 · GLAMOUR & MODE Spain Covers · Mrs. Bulgaria International 2019 · Vayana Yoga Club">Healing Mentor · First Lady Award 2026 · Корица GLAMOUR &amp; MODE Spain · Mrs. Bulgaria International 2019 · Vayana Yoga Club</p>
+    </div>
+    <div>
+      <span class="footer-col-title" data-bg="— ПРАКТИКИ" data-en="— PRACTICES">— ПРАКТИКИ</span>
+      <ul class="footer-list">
+        <li data-bg="Групови занимания — Vayana" data-en="Group Sessions — Vayana">Групови занимания — Vayana</li>
+        <li data-bg="Лични практики" data-en="Private Sessions">Лични практики</li>
+        <li data-bg="Сертифициран курс — Healing" data-en="Certified Course — Healing">Сертифициран курс — Healing</li>
+        <li data-bg="Женски кръгове" data-en="Women's Circles">Женски кръгове</li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-col-title" data-bg="— СОЦИАЛНИ МРЕЖИ" data-en="— SOCIAL MEDIA">— СОЦИАЛНИ МРЕЖИ</span>
+      <ul class="footer-list">
+        <li><a href="https://www.facebook.com/nelsun.tsaneva" target="_blank" rel="noopener">Facebook — nelsun.tsaneva</a></li>
+        <li><a href="https://www.instagram.com/lina_official_999/" target="_blank" rel="noopener">Instagram — lina_official_999</a></li>
+        <li><a href="https://www.facebook.com/linatsanevaofficial" target="_blank" rel="noopener">Facebook — linatsanevaofficial</a></li>
+        <li><a href="https://www.instagram.com/vayana_yogaclub" target="_blank" rel="noopener">Instagram — vayana_yogaclub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy" data-bg="© 2026 НЕДЕЛИНА ЦАНЕВА · LINA · ВСИЧКИ ПРАВА ЗАПАЗЕНИ" data-en="© 2026 NEDELINA TSANEVA · LINA · ALL RIGHTS RESERVED">© 2026 НЕДЕЛИНА ЦАНЕВА · LINA · ВСИЧКИ ПРАВА ЗАПАЗЕНИ</div>
+  </div>
+</footer>
+
+<script>
+/* ── CURSOR ── */
+const cur = document.getElementById('cur');
+const ring = document.getElementById('ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+(function animRing(){
+  rx+=(mx-rx)*.1; ry+=(my-ry)*.1;
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+})();
+document.querySelectorAll('a,button,.g-item,.practice-card,.ach-card,.social-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='16px';cur.style.height='16px';ring.style.width='50px';ring.style.height='50px';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='8px';cur.style.height='8px';ring.style.width='34px';ring.style.height='34px';});
+});
+
+/* ── REVEAL ── */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ── THEME ── */
+let isDark=true;
+function toggleTheme(){
+  isDark=!isDark;
+  document.documentElement.classList.toggle('light',!isDark);
+  updateThemeLabel();
+}
+function updateThemeLabel(){
+  const span=document.querySelector('#themeBtn span'); if(!span) return;
+  const isEN=document.documentElement.lang==='en';
+  span.textContent=isDark?(isEN?'LIGHT':'СВЕТЛА'):(isEN?'DARK':'ТЪМНА');
+  document.getElementById('themeBtn').firstChild.textContent=isDark?'☀ ':'☾ ';
+}
+
+/* ── LANGUAGE ── */
+let isEN=false;
+function toggleLang(){
+  isEN=!isEN;
+  document.getElementById('langBtn').textContent=isEN?'БГ':'EN';
+  document.documentElement.lang=isEN?'en':'bg';
+  document.querySelectorAll('[data-bg][data-en]').forEach(el=>{
+    el.textContent=isEN?el.getAttribute('data-en'):el.getAttribute('data-bg');
+  });
+  document.querySelectorAll('[data-bg-html][data-en-html]').forEach(el=>{
+    el.innerHTML=isEN?el.getAttribute('data-en-html'):el.getAttribute('data-bg-html');
+  });
+  document.title=isEN?'Nedelina Tsaneva · Lina — Healing Mentor & Yoga Teacher':'Неделина Цанева · Lina — Healing Mentor & Yoga Teacher';
+  updateThemeLabel();
+}
+
+/* ── MUSIC ── */
+const audio=document.getElementById('bgMusic');
+const btn=document.getElementById('musicBtn');
+const waves=document.getElementById('musicWaves');
+let playing=false;
+function toggleMusic(){
+  if(playing){ audio.pause(); btn.textContent='▶'; waves.classList.remove('playing'); }
+  else { audio.play().catch(()=>{}); btn.textContent='⏸'; waves.classList.add('playing'); }
+  playing=!playing;
+}
+</script>
+</body>
+</html>
